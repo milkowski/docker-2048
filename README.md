@@ -16,6 +16,7 @@ docker run -d -p 8080:80 docker-2048
 ```sh
 docker run -d -p 8080:80 quay.io/milkowski/2048
 ```
+Both AMD64 and ARM64 images are supported.
 
 # Access the game
 
