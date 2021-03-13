@@ -1,10 +1,8 @@
 FROM alpine:latest
 
-MAINTAINER alex <alexwhen@gmail.com> 
+RUN apk --update add nginx && mkdir -p /run/nginx && sed -i 's/return 404;/root html; index index.html;/' /etc/nginx/conf.d/default.conf
 
-RUN apk --update add nginx
-
-COPY 2048 /usr/share/nginx/html
+COPY 2048 /var/lib/nginx/html
 
 EXPOSE 80
 
